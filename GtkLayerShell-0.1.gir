@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<!-- This file was automatically generated from C sources - DO NOT EDIT!
+To affect the contents of this file, edit the original C definitions,
+and/or use gtk-doc annotations.  -->
+<repository version="1.2"
+            xmlns="http://www.gtk.org/introspection/core/1.0"
+            xmlns:c="http://www.gtk.org/introspection/c/1.0"
+            xmlns:glib="http://www.gtk.org/introspection/glib/1.0">
+  <include name="Gtk" version="3.0"/>
+  <package name="gtk-layer-shell-0"/>
+  <c:include name="gtk-layer-shell/gtk-layer-shell.h"/>
+  <namespace name="GtkLayerShell"
+             version="0.1"
+             shared-library="libgtk-layer-shell.so.0"
+             c:identifier-prefixes="GtkLayerShell"
+             c:symbol-prefixes="gtk_layer">
+    <enumeration name="Edge" c:type="GtkLayerShellEdge">
+      <source-position filename="../include/gtk-layer-shell.h" line="70"/>
+      <member name="left" value="0" c:identifier="GTK_LAYER_SHELL_EDGE_LEFT">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="58">The left edge of the screen.</doc>
+      </member>
+      <member name="right" value="1" c:identifier="GTK_LAYER_SHELL_EDGE_RIGHT">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="59">The right edge of the screen.</doc>
+      </member>
+      <member name="top" value="2" c:identifier="GTK_LAYER_SHELL_EDGE_TOP">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="60">The top edge of the screen.</doc>
+      </member>
+      <member name="bottom"
+              value="3"
+              c:identifier="GTK_LAYER_SHELL_EDGE_BOTTOM">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="61">The bottom edge of the screen.</doc>
+      </member>
+      <member name="entry_number"
+              value="4"
+              c:identifier="GTK_LAYER_SHELL_EDGE_ENTRY_NUMBER">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="62">Should not be used except to get the number of entries</doc>
+      </member>
+    </enumeration>
+    <enumeration name="Layer" c:type="GtkLayerShellLayer">
+      <source-position filename="../include/gtk-layer-shell.h" line="54"/>
+      <member name="background"
+              value="0"
+              c:identifier="GTK_LAYER_SHELL_LAYER_BACKGROUND">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="42">The background layer.</doc>
+      </member>
+      <member name="bottom"
+              value="1"
+              c:identifier="GTK_LAYER_SHELL_LAYER_BOTTOM">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="43">The bottom layer.</doc>
+      </member>
+      <member name="top" value="2" c:identifier="GTK_LAYER_SHELL_LAYER_TOP">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="44">The top layer.</doc>
+      </member>
+      <member name="overlay"
+              value="3"
+              c:identifier="GTK_LAYER_SHELL_LAYER_OVERLAY">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="45">The overlay layer.</doc>
+      </member>
+      <member name="entry_number"
+              value="4"
+              c:identifier="GTK_LAYER_SHELL_LAYER_ENTRY_NUMBER">
+        <doc xml:space="preserve"
+             filename="../include/gtk-layer-shell.h"
+             line="46">Should not be used except to get the number of entries</doc>
+      </member>
+    </enumeration>
+    <function name="auto_exclusive_zone_enable"
+              c:identifier="gtk_layer_auto_exclusive_zone_enable">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="162">Enables auto exclusive zone for @window.</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="168"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="164">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="init_for_window" c:identifier="gtk_layer_init_for_window">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="72">Set the @window up to be a layer surface once it is mapped:
+This must be called before the @window is realized.</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="79"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="74">A #GtkWindow to be turned into a layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_anchor" c:identifier="gtk_layer_set_anchor">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="121">Set whether @window should be anchored to @edge.
+- If two perpendicular edges are anchored, the surface with be anchored to that corner
+- If two opposite edges are anchored, the window will be stretched across the screen in that direction
+
+Default is %FALSE for each #GtkLayerShellEdge</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="133"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="123">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="edge" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="124">A #GtkLayerShellEdge this layer suface may be anchored to.</doc>
+          <type name="Edge" c:type="GtkLayerShellEdge"/>
+        </parameter>
+        <parameter name="anchor_to_edge" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="125">Whether or not to anchor this layer surface to @edge.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_exclusive_zone"
+              c:identifier="gtk_layer_set_exclusive_zone">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="148">If auto exclusive zone is enabled, exclusive zone will automatically be set to the
+size of the @window + relevant margin. To disable auto exclusive zone, just set the
+exclusive zone to 0 or any other fixed value. There is no need to manually set the
+exclusive zone size when using auto exclusive zone.
+
+Default is 0</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="160"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="150">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="exclusive_zone" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="151">The size of the exclusive zone.</doc>
+          <type name="gint" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_keyboard_interactivity"
+              c:identifier="gtk_layer_set_keyboard_interactivity">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="170">Whether the @window should receive keyboard events from the compositor.
+
+Default is %FALSE</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="179"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="172">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="interacitvity" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="173">Whether the layer surface should receive keyboard events.</doc>
+          <type name="gboolean" c:type="gboolean"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_layer" c:identifier="gtk_layer_set_layer">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="97">Set the "layer" on which the surface appears (controls if it is over top of or below other surfaces). If the @window is currently mapped, it will get remapped so the change
+can take effect.
+
+Default is #GTK_LAYER_SHELL_LAYER_TOP</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="107"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="99">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="layer" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="100">The layer on which this surface appears.</doc>
+          <type name="Layer" c:type="GtkLayerShellLayer"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_margin" c:identifier="gtk_layer_set_margin">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="135">Set the margin for a specific @edge of a @window. Effects both surface's distance from
+the edge and its exclusive zone size (if auto exclusive zone enabled).
+
+Default is 0 for each #GtkLayerShellEdge</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="146"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="137">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="edge" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="138">The #GtkLayerShellEdge for which to set the margin.</doc>
+          <type name="Edge" c:type="GtkLayerShellEdge"/>
+        </parameter>
+        <parameter name="margin_size" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="139">The margin for @edge to be set.</doc>
+          <type name="gint" c:type="int"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_monitor" c:identifier="gtk_layer_set_monitor">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="109">Set the output for the window to be placed on, or %NULL to let the compositor choose.
+If the window is currently mapped, it will get remapped so the change can take effect.
+
+Default is %NULL</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="119"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="111">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="monitor" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="112">The output this layer surface will be placed on (%NULL to let the compositor decide).</doc>
+          <type name="Gdk.Monitor" c:type="GdkMonitor*"/>
+        </parameter>
+      </parameters>
+    </function>
+    <function name="set_namespace" c:identifier="gtk_layer_set_namespace">
+      <doc xml:space="preserve"
+           filename="../include/gtk-layer-shell.h"
+           line="81">Set the "namespace" of the surface.
+
+No one is quite sure what this is for, but it probably should be something generic
+("panel", "osk", etc). The @name_space string is copied, and caller maintians
+ownership of original. If the window is currently mapped, it will get remapped so
+the change can take effect.
+
+Default is "gtk-layer-shell" (which will be used if set to %NULL)</doc>
+      <source-position filename="../include/gtk-layer-shell.h" line="95"/>
+      <return-value transfer-ownership="none">
+        <type name="none" c:type="void"/>
+      </return-value>
+      <parameters>
+        <parameter name="window" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="83">A layer surface.</doc>
+          <type name="Gtk.Window" c:type="GtkWindow*"/>
+        </parameter>
+        <parameter name="name_space" transfer-ownership="none">
+          <doc xml:space="preserve"
+               filename="../include/gtk-layer-shell.h"
+               line="84">The namespace of this layer surface.</doc>
+          <type name="utf8" c:type="const char*"/>
+        </parameter>
+      </parameters>
+    </function>
+  </namespace>
+</repository>
